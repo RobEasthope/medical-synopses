@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Box } from 'rebass';
-import { Basic, Combined } from '../styles/globalStyles';
+import { Basic, Combined, Animated, bounce } from '../styles/globalStyles';
 
 const Home = () => (
   <>
