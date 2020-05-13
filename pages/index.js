@@ -1,13 +1,14 @@
+import { Box } from 'rebass';
 import { Basic, Combined, Animated, bounce } from '../styles/globalStyles';
 
 const Home = () => (
-  <div>
+  <Box>
     <Basic>Cool Styles</Basic>
     <Combined>
       With <code>:hover</code>.
     </Combined>
     <Animated animation={bounce}>Let's bounce.</Animated>
-  </div>
+  </Box>
 );
 
 export default Home;
