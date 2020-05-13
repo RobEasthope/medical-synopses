@@ -1,9 +1,13 @@
 import { keyframes, css, Global } from '@emotion/core';
 import styled from '@emotion/styled';
+import emotionNormalize from 'emotion-normalize';
 
 export const globalStyles = (
   <Global
     styles={css`
+      /* Nomalize.css */
+      ${emotionNormalize}
+
       html,
       body {
         padding: 3rem 1rem;
@@ -37,6 +41,7 @@ export const hoverStyles = css`
     box-shadow: -15px -15px 0 0 aqua, -30px -30px 0 0 cornflowerblue;
   }
 `;
+
 export const bounce = keyframes`
   from {
     transform: scale(1.01);
@@ -57,6 +62,7 @@ export const Combined = styled('div')`
     background-color: linen;
   }
 `;
+
 export const Animated = styled('div')`
   ${basicStyles};
   ${hoverStyles};
