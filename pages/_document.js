@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <style
             data-emotion-css={this.props.ids.join(' ')}
