@@ -1,7 +1,8 @@
 import * as React from 'react';
 import NextApp from 'next/app';
 import { CacheProvider } from '@emotion/core';
-
+import { ThemeProvider } from 'emotion-theming';
+import theme from '@rebass/preset';
 // Use only { cache } from 'emotion'. Don't use { css }.
 import { cache } from 'emotion';
 
@@ -12,8 +13,10 @@ export default class App extends NextApp {
     const { Component, pageProps } = this.props;
     return (
       <CacheProvider value={cache}>
-        {globalStyles}
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          {globalStyles}
+          <Component {...pageProps} />
+        </ThemeProvider>
       </CacheProvider>
     );
   }
