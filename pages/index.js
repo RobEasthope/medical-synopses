@@ -7,7 +7,6 @@ const Home = () => (
     <Combined>
       With <code>:hover</code>.
     </Combined>
-    <Animated animation={bounce}>Let's bounce.</Animated>
   </Box>
 );
 
