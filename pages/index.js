@@ -25,7 +25,15 @@ function Home({ posts }) {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+  const pageQuery = groq`
+    *[_type == 'synopsis' && slug.current == 'foo'][0]{
+      title,
+      _updatedAt,
+    }
+  `;
+
+  const res = await fetch(pageQuery);
   const posts = await res.json();
 
   // By returning { props: posts }, the Blog component
