@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { Box } from 'rebass';
-import { Basic, Combined, Animated, bounce } from '../styles/globalStyles';
 
 function Home() {
   return (
