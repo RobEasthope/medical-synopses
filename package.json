@@ -11,6 +11,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@rebass/preset": "^4.0.5",
+    "@sanity/client": "^1.149.13",
     "emotion": "^10.0.27",
     "emotion-normalize": "^10.1.0",
     "emotion-server": "^10.0.27",
