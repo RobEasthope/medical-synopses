@@ -15,7 +15,7 @@ export const globalStyles = (
         background: white;
         min-height: 100%;
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 24px;
+        font-size: 18px;
       }
 
       body {
