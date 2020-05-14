@@ -10,12 +10,16 @@ export const globalStyles = (
 
       html,
       body {
-        padding: 3rem 1rem;
+        padding: 0;
         margin: 0;
-        background: papayawhip;
+        background: white;
         min-height: 100%;
         font-family: Helvetica, Arial, sans-serif;
         font-size: 24px;
+      }
+
+      body {
+        padding: 1rem;
       }
     `}
   />
