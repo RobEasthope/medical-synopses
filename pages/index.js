@@ -11,6 +11,7 @@ const Home = () => (
     </Head>
     <Box>
       <h2>Sanity test</h2>
+      <p>Foo</p>
     </Box>
   </>
 );
