@@ -3,6 +3,8 @@ import groq from 'groq';
 
 import { Box } from 'rebass';
 
+import sanityClient from '../lib/sanity-client';
+
 function Home({ posts }) {
   console.log(posts);
 
