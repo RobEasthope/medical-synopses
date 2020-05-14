@@ -3,11 +3,9 @@ import groq from 'groq';
 
 import { Box } from 'rebass';
 
-import sanityClient from '../lib/sanity-client';
+import { getSingleSynopsis } from '../lib/api';
 
-function Home({ posts }) {
-  console.log(posts);
-
+function Home({ synopsis }) {
   return (
     <>
       <Head>
@@ -18,6 +16,7 @@ function Home({ posts }) {
       <Box>
         <h2>Sanity test</h2>
         <p>Foo</p>
+        {synopsis && <p>Title: {synopsis.title}</p>}
       </Box>
     </>
   );
@@ -26,25 +25,21 @@ function Home({ posts }) {
 // This function gets called at build time on server-side.
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
-export async function getStaticProps() {
+export async function getStaticProps({
+  params = { slug: 'foo' },
+  preview = false,
+}) {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
 
-  const pageQuery = groq`
-    *[_type == 'synopsis' && slug.current == 'foo'][0]{
-      title,
-      _updatedAt,
-    }
-  `;
+  const data = await getSingleSynopsis(params.slug, preview);
 
-  const res = await fetch(pageQuery);
-  const posts = await res.json();
+  console.log(data);
 
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
   return {
     props: {
-      posts,
+      preview,
+      synopsis: data || null,
     },
   };
 }
