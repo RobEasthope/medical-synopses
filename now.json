@@ -1,14 +1,10 @@
 {
   "env": {
-    "SANITY_PREVIEW_SECRET": "@sanity_preview_secret",
-    "SANITY_API_TOKEN": "@sanity_api_token",
     "SANITY_PROJECT_ID": "@sanity_project_id",
     "SANITY_DATASET": "@sanity_dataset"
   },
   "build": {
     "env": {
-      "SANITY_PREVIEW_SECRET": "@sanity_preview_secret",
-      "SANITY_API_TOKEN": "@sanity_api_token",
       "SANITY_PROJECT_ID": "@sanity_project_id",
       "SANITY_DATASET": "@sanity_dataset"
     }
