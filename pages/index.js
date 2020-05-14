@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import groq from 'groq';
+
 import { Box } from 'rebass';
 
 function Home({ posts }) {
