@@ -10,10 +10,7 @@ const Home = () => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <Box>
-      <Basic>Cool Styles</Basic>
-      <Combined>
-        With <code>:hover</code>.
-      </Combined>
+      <h2>Sanity test</h2>
     </Box>
   </>
 );
