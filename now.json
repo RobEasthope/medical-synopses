@@ -1,5 +1,6 @@
 {
   "env": {
+    "SANITY_PREVIEW_SECRET": "@sanity_preview_secret",
     "SANITY_PROJECT_ID": "@sanity_project_id",
     "SANITY_DATASET": "@sanity_dataset"
   },
