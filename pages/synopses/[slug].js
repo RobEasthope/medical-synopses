@@ -15,7 +15,7 @@ export default function Synopsis({ synopsis, synopses, preview }) {
       ) : (
         <div>
           <article>
-            <h1>{synopsis && synopsis.title.en}</h1>
+            <h1>{synopsis && synopsis.title.tr}</h1>
           </article>
           {/* {synopses.length > 0 && <MoreStories synopses={synopses} />} */}
         </div>
