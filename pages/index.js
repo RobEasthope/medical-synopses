@@ -11,7 +11,7 @@ function Home({ synopsis }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box>{synopsis && <Heading>{synopsis.title}</Heading>}</Box>
+      <Box>{synopsis && <Heading>{synopsis.title.en}</Heading>}</Box>
     </>
   );
 }
