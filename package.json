@@ -12,6 +12,18 @@
     "test": "jest",
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
   "dependencies": {
     "next": "9.4.4",
     "react": "16.13.1",
