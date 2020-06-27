@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export const Home = (): JSX.Element => {
+const Home = (): JSX.Element => {
   return (
     <div className="container">
       <Head>
@@ -207,3 +207,5 @@ export const Home = (): JSX.Element => {
     </div>
   );
 };
+
+export default Home;
