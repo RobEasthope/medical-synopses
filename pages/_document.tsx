@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types  */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import Document, { DocumentContext } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
@@ -29,3 +31,5 @@ export class MyDocument extends Document {
     }
   }
 }
+/* eslint-enable @typescript-eslint/explicit-module-boundary-types  */
+/* eslint-enable @typescript-eslint/explicit-function-return-type */
