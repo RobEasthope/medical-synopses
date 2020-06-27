@@ -1,4 +1,5 @@
 {
+  "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint",
     "eslint-comments",
@@ -21,9 +22,10 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "env": {
-    "node": true,
+    "es6": true,
     "browser": true,
-    "jest": true
+    "jest": true,
+    "node": true
   },
   "rules": {
     // Suppress errors for missing 'import React' in files as Next adds it automatically
