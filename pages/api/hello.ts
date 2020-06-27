@@ -1,6 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-export const Hello = (req: NextApiRequest, res: NextApiResponse) => {
+type Data = {
+  name: string;
+};
+
+export const Hello = (req: NextApiRequest, res: NextApiResponse<Data>) => {
   res.statusCode = 200;
   res.json({ name: "John Doe" });
+
+  return res;
 };
