@@ -26,6 +26,8 @@
     "jest": true
   },
   "rules": {
+    // Suppress errors for missing 'import React' in files as Next adds it automatically
+    "react/react-in-jsx-scope": "off",
     // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
     "no-prototype-builtins": "off",
     // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
