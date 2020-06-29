@@ -3,7 +3,7 @@ import { GetStaticProps } from "next";
 
 import { getTestSynopsis } from "../sanity/api-calls";
 
-type IndexProps = { synopsis: { title: { en: string } } };
+type IndexProps = { synopsis: { title: { _type: string; en: string } } };
 
 const Home = ({ synopsis }: IndexProps): JSX.Element => {
   return (
