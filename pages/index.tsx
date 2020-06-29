@@ -6,8 +6,6 @@ import { getTestSynopsis } from "../sanity/api-calls";
 type IndexProps = { synopsis: { title: { _type: string; en: string } } };
 
 const Home = ({ synopsis }: IndexProps): JSX.Element => {
-  console.log(synopsis);
-
   return (
     <>
       {synopsis && (
