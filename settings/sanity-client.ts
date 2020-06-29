@@ -12,10 +12,9 @@ const options = {
   // data always (potentially slightly slower and a bit more expensive).
 };
 
-// eslint-disable-next-line import/no-default-export
-export default sanityClient(options);
+export const sanity = sanityClient(options);
 
-export const previewClient = sanityClient({
+export const sanityPreview = sanityClient({
   ...options,
   useCdn: false,
   token: process.env.SANITY_PREVIEW_SECRET,
